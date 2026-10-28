@@ -17,6 +17,11 @@ def runguess(number,guess):
 
 # to create the route
 @app.route("/")
+@app.route("/user")
+def user_guide():
+    return render_template("user-guide.html")  
+
+
 @app.route("/index",methods = ["GET","POST"])
 def index():   
     return render_template("index.html")
@@ -54,7 +59,14 @@ def set_level():
 def guess_number():
     guess = 0
     if request.method == "POST":
-        guess = int(request.form["input"])
+        try:
+            guess = int(request.form["input"])
+        except ValueError:
+            return """
+            <script> alert("Invalid Datatype");
+                    window.history.back();
+            </script>
+        """
     if session.get("game_over"):
         return render_template("index.html" , result="Game Over! Start a new Game.")
     secret_number = session["secret_number"]

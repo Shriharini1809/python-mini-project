@@ -166,7 +166,42 @@ body{
 }
 .output-text{
     font-size: 13px;
-    color: var(--cyan);
+    color: var(--green);
     font-weight: 600;
 }
 
+@media (max-width: 576px){
+    .big-container{
+        width: 350px;
+        padding: 20px;
+    }
+    .choose-the-level{
+        display: block;
+    }
+    .level-text{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .levels{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;        
+    }
+    .confirm-btn{
+        margin-top: 20px;
+    }
+    .input-guess{
+        
+        margin-left: 10px;
+    }
+    
+    .input-guess input,
+    .input-guess button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 290px;
+    }
+    
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide of Guess Number</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            background-color: #0b1120;
+            margin-block: 60px;
+            display: grid;
+            place-items: center;
+        }
+        .container{
+            background-color: #111c30;
+            border: 1px solid hsl(217, 33%, 17%);
+            width: 600px;
+            height: auto;
+            padding: 40px;
+            border-radius: 30px;
+
+        }
+        p{
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        .how-to-play{
+            margin-block: 10px;
+        }
+        .play{
+            margin-bottom: 10px;
+        }
+        .start{
+            margin-top: 10px;
+        }
+        .levels{
+            line-height: 24px;
+        }
+        h5{
+            margin-bottom: 4px;
+        }
+        .start p{
+            margin-top: 5px;
+        }
+        .tips{
+            margin-top: 10px;
+        }
+        .tips p{
+            margin-top: 5px;
+        }
+        .route-guess{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            background-color: #6366f1;
+            padding: 7px;
+            border-radius: 7px;
+
+        }
+        .t1{
+            margin-top: 10px;
+        }
+    
+        a{
+            text-decoration: none;
+        }
+        @media (max-width: 576px){
+            .container{
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎯 Guess the Number – User Guide</h2>
+        <p class="t1">Welcome to the Guess the Number game! Your goal is simple — guess the secret number within the available attempts.</p>
+        <div class="how-to-play">
+            <h3 class="play">🕹️ How to Play</h3>
+            <h5>1. Choose a Difficulty Level</h5>
+            <div class="levels">
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• 🟢 Easy – Number between 1 and 50, with 10 attempts.</p>
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• 🟡 Medium – Number between 1 and 100, with 7 attempts.</p>
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• 🔴 Hard – Number between 1 and 200, with 5 attempts.</p>
+            </div>
+            <h5>2. Enter Your Guess</h5>
+            <div class="levels">
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Enter a number within the selected range.</p>
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Click Guess Number to submit your guess.</p>
+            </div>
+            <h5>3. Use the Hints</h5>
+            <div class="levels">
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ✅ Right – You guessed the correct number.</p>
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• 🔥 Hot – Your guess is close to the secret number.</p>
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• ❄️ Cold – Your guess is far from the secret number.</p>
+            </div>
+            <h5>4. Watch Your Attempts</h5>
+            <div class="levels">
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Your remaining attempts are displayed below the game.</p>
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• The attempts indicator turns red when fewer than 3 attempts remain.</p>
+            </div>
+            <h5>5. Win or Lose</h5>
+            <div class="levels">
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Guess the correct number before your attempts run out to win 🎉.</p>
+                <p class="level">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• If all attempts are used, the game ends 😢.</p>
+            </div>
+            <div class="start">
+                <h3>🔄 Start a New Game</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After the game ends, choose a difficulty level again to start a new game with a new secret number.</p>
+            </div>
+            <div class="tips">
+                <h3>💡 Tip</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the Hot and Cold hints to adjust your next guess and improve your chances of winning!</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="route-guess">Let's Start ⟶</a>
+        </div>
+    </div>
+</body>
+</html>
